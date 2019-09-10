@@ -1,0 +1,136 @@
+@import '../../../vars.scss';
+
+.document_wrap {
+      margin-top: 70px;
+
+      .document {
+            width: 1200px;
+            padding: 40px 20px;
+
+            .leading_box {
+                  height: calc(100vh - 140px - 122px)
+            }
+
+            .class_items {
+                  .class_item {
+                        margin-bottom: 30px;
+
+                        .title {
+                              font-size: 24px;
+                              padding-left: 8px;
+                              border-left: 6px solid $color_main;
+                        }
+
+                        .classes {
+                              .class:nth-of-type(6n) {
+                                    margin-right: 0;
+                              }
+
+                              .class {
+                                    width: calc(95% / 6);
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background-color: whitesmoke;
+                                    margin-right: 1%;
+                                    margin-bottom: 10px;
+                                    color: #333;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    transition: all ease 0.3s;
+                              }
+
+                              .class:hover {
+                                    background-color: $color_main;
+                                    color: white;
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+.mask_wrap {
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: 9999;
+
+      .current_class_wrap {
+            width: 800px;
+            height: 400px;
+            background-color: black;
+            box-shadow: 0 0 12px black;
+            border-radius: 10px;
+            font-size: 24px;
+
+            .options {
+                  top: 20px;
+                  left: 20px;
+
+                  .btn {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 20px;
+                        outline: none;
+                        border: none;
+                        margin-right: 10px;
+                  }
+            }
+
+            .current_class {
+                  margin-left: 80px;
+
+                  .class_name {
+                        color: #b83a3a;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                  }
+
+                  .class_content {
+                        margin-left: 60px;
+
+                        .class_attribute {
+                              padding: 4px 0;
+                        }
+                  }
+
+                  .bracket_end {
+                        margin-top: 10px;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width:1200px) {
+
+      .document_wrap {
+            .document {
+                  width: 90%;
+                  padding: 40px 0;
+
+                  .class_items {
+                        .class_item {
+                              .classes {
+                                    .class:nth-of-type(2n) {
+                                          margin-right: 0;
+                                    }
+
+                                    .class {
+                                          width: calc((99% - 10px) / 2);
+                                          margin-right: 10px;
+                                          margin-bottom: 10px;
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+
+      .mask_wrap {
+            .current_class_wrap {
+                  width: 90%;
+                  height: 300px;
+                  font-size: 15px;
+            }
+      }
+}

@@ -1,0 +1,55 @@
+<section class="document_wrap bg_white flex justify_center">
+      <div class="document flex flex_column border_box">
+            <div
+                  *ngIf="!is_classes_ready"
+                  class="leading_box w_100 flex justify_center align_center"
+            >
+                  <span class="loading_text font_bold fontsize_64 black">Loading...</span>
+            </div>
+            <div
+                  *ngIf="is_classes_ready"
+                  class="class_items w_100 flex flex_column"
+            >
+                  <div
+                        *ngFor="let item of class_items"
+                        class="class_item w_100"
+                  >
+                        <span class="title font_bold inline_block mb_16 w_100">{{item.title}}</span>
+                        <div class="classes w_100 flex flex_wrap">
+                              <span
+                                    *ngFor="let class of item.classes"
+                                    class="class"
+                                    (click)="handleClickClass(class.class_content)"
+                              >{{class.class_name}}</span>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+
+<section
+      *ngIf="is_modal_show"
+      class="mask_wrap w_100vw h_100vh fixed top_0 left_0 flex justify_center align_center"
+>
+      <div class="current_class_wrap border_box white relative flex align_center">
+            <div class="options absolute flex">
+                  <button
+                        class="bg_red btn"
+                        (click)="handleClickClose()"
+                  ></button>
+                  <button class="bg_orange btn"></button>
+                  <button class="bg_green btn"></button>
+            </div>
+            <div class="current_class">
+                  <span class="class_name font_bold inline_block">.{{current_class.name}}</span>
+                  <span class="bracket_start">{{bracket_start}}</span>
+                  <div class="class_content flex flex_column">
+                        <span
+                              *ngFor="let item of current_class.value"
+                              class="class_attribute"
+                        >{{item}}</span>
+                  </div>
+                  <span class="bracket_end inline_block">{{bracket_end}}</span>
+            </div>
+      </div>
+</section>

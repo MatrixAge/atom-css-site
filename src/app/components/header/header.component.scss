@@ -1,0 +1,109 @@
+@import '../../../vars.scss';
+
+header {
+      padding: 10px 0;
+      z-index: 99;
+      top: 0;
+
+      .header_content {
+            width: 1200px;
+
+            .logo {
+                  a {
+                        img {
+                              width: 48px;
+                              transition: all ease 0.3s;
+                              border-radius: 100px;
+                              background: transparent;
+                        }
+                  }
+
+                  a:hover {
+                        img {
+                              box-shadow: 0 0 80px $color_main;
+                              transition: all ease 0.3s;
+                        }
+                  }
+            }
+
+            .right_options {
+                  .menu {
+                        list-style: none;
+
+                        a {
+                              line-height: 18px;
+                        }
+
+                        .active {
+                              color: $color_main;
+                        }
+
+                        a:hover {
+                              color: $color_main;
+                        }
+                  }
+
+                  .socials {
+                        a {
+                              margin-left: 24px;
+                              transition: all ease 0.3s;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width:1200px) {
+      header {
+            padding: 10px 0;
+            z-index: 99;
+            top: 0;
+
+            .header_content {
+                  width: 90%;
+
+                  .logo {
+                        a {
+                              img {
+                                    width: 48px;
+                                    transition: all ease 0.3s;
+                                    border-radius: 100px;
+                                    background: transparent;
+                              }
+                        }
+
+                        a:hover {
+                              img {
+                                    box-shadow: 0 0 80px $color_main;
+                                    transition: all ease 0.3s;
+                              }
+                        }
+                  }
+
+                  .right_options {
+                        .menu {
+                              list-style: none;
+
+                              a {
+                                    line-height: 18px;
+                              }
+
+                              .active {
+                                    color: $color_main;
+                              }
+
+                              a:hover {
+                                    color: $color_main;
+                              }
+                        }
+
+                        .socials {
+                              a {
+                                    margin-left: 24px;
+                                    transition: all ease 0.3s;
+                              }
+                        }
+                  }
+            }
+      }
+}

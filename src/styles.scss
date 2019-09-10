@@ -1,0 +1,42 @@
+@import './vars.scss';
+
+body{
+      font-family: Arial, sans-serif;
+}
+
+.btn {
+      height: 60px;
+      font-size: 16px;
+      line-height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      border-radius: 100px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+      transition: all ease 0.3s;
+      outline: none;
+}
+
+.btn a {
+      display: flex;
+      align-items: center;
+}
+
+.btn:hover {
+      border-radius: 0;
+}
+
+.btn_main {
+      background: $color_main;
+      border: none;
+}
+
+.btn_sub {
+      background: transparent;
+      border: 2px solid white;
+      box-sizing: border-box;
+}

@@ -1,0 +1,544 @@
+<div class="bg_home fixed w_100">
+      <img
+            class="w_100"
+            src="./assets/images/bg_home.jpg"
+            alt="bg_home"
+      >
+</div>
+
+<div class="cover bg_black w_100 relative border_box flex justify_center overflow_hidden">
+      <img
+            class="bg_cover absolute"
+            src="./assets/images/bg_cover.png"
+            alt="bg_cover"
+      >
+      <div class="cover_content flex flex_column align_center overflow_visible">
+            <div class="big_title">
+                  <span class="white font_bold">atom.css</span>
+            </div>
+            <div class="slogan">
+                  <span class="white fontsize_18 letter_spacing_1 text_center inline_block">A atom-style
+                        library of CSS
+                        atomic
+                        elements. To build app
+                        faster and
+                        more flexible!</span>
+            </div>
+            <div class="cover_options flex">
+                  <a routerLink="/docs">
+                        <button class="btn_doc btn btn_main">
+                              Documentation
+                        </button>
+                  </a>
+                  <a
+                        href="https://github.com/isVertical/atom.css"
+                        target="_blank"
+                  >
+                        <button class="btn_github btn btn_sub bg_black">
+                              <img
+                                    class="mr_10"
+                                    src="./assets/images/icon_github.png"
+                                    alt="icon_github"
+                              >
+                              <span>Source code</span>
+                        </button>
+                  </a>
+            </div>
+      </div>
+</div>
+
+<div class="featrues w_100 border_box flex justify_center">
+      <div class="featrues_content flex justify_around">
+            <div class="featrues_item flex flex_column align_center">
+                  <img
+                        class="icon"
+                        src="./assets/images/icon_flexible.png"
+                        alt="icon_featrue"
+                  >
+                  <span class="title fontsize_18 font_bolder">FLEXIBLE</span>
+                  <span class="describtion text_center fontsize_16 color_333">Built your web app like built a building
+                        blocks,change everything you want change in HTML.</span>
+            </div>
+            <div class="featrues_item flex flex_column align_center">
+                  <img
+                        class="icon"
+                        src="./assets/images/icon_simple.png"
+                        alt="icon_featrue"
+                  >
+                  <span class="title fontsize_18 font_bolder">SIMPLE</span>
+                  <span class="describtion text_center fontsize_16 color_333">Write atom-style CSS in HTML/React
+                        components/Angular templates,no more others,just CSS.</span>
+            </div>
+            <div class="featrues_item flex flex_column align_center">
+                  <img
+                        class="icon"
+                        src="./assets/images/icon_faster.png"
+                        alt="icon_featrue"
+                  >
+                  <span class="title fontsize_18 font_bolder">FASTER</span>
+                  <span class="describtion text_center fontsize_16 color_333">To code like a machine,write more
+                        pages in a few times,spend more time in JS or API.</span>
+            </div>
+      </div>
+</div>
+
+<div class="contact_us border_box flex justify_center">
+      <div class="contact_us_content flex justify_start">
+            <div class="wrap flex flex_column">
+                  <span class="title fontsize_32 font_bold white letter_spacing_1">The way of builting web App that
+                        based
+                        on future. Build in this way. </span>
+                  <span class="description fontsize_18 white letter_spacing_1">Build your web App in the minimalist
+                        wind & atom.css.
+                        Contact
+                        us to get your own web App built by atom.css and Fic Design.</span>
+                  <button
+                        class="btn font_bold fontsize_16 border_none bg_white"
+                        (click)="handleClickContact()"
+                  >Contact us</button>
+            </div>
+      </div>
+</div>
+
+<div class="demonstration w_100 flex justify_center">
+      <div class="demonstration_content flex flex_column align_center">
+            <span class="title font_bold white">Demonstration</span>
+            <span class="describtion white text_center fontsize_16">See how to use atom.css building you web
+                  Appfaster,and
+                  flexible,
+                  all usage in Doc.</span>
+            <div class="demo_wrap">
+                  <div class="toggle w_100 border_box flex">
+                        <button
+                              *ngFor="let item of toggle_options"
+                              [class.active]="item === selected_option"
+                              (click)="onSelect(item)"
+                              class="btn_toggle border_box white fontsize_14"
+                        >{{item}}</button>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Center'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">flex</a>
+                              <a class="option_item active letter_spacing_1 border_box">justify_center</a>
+                              <a class="option_item active letter_spacing_1 border_box">align_center</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex justify_center align_center">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Vertical Center'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">flex</a>
+                              <a class="option_item active letter_spacing_1 border_box">align_center</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex align_center">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Horizontal Center'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">flex</a>
+                              <a class="option_item active letter_spacing_1 border_box">justify_center</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex justify_center">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex justify_center align_center">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Float'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">left</a>
+                              <a class="option_item active letter_spacing_1 border_box">clearfix</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box clearfix">
+                                    <div class="block_test bg_red white fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none left flex align_center">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Interval'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">pt_20</a>
+                              <a class="option_item active letter_spacing_1 border_box">pb_20</a>
+                              <a class="option_item active letter_spacing_1 border_box">mr_20</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex align_center pt_20 pb_20 mr_20">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Font'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">font_bolder</a>
+                              <a class="option_item active letter_spacing_1 border_box">fontsize_32</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex align_center font_bolder fontsize_32">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Color'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">bg_whitesmoke</a>
+                              <a class="option_item active letter_spacing_1 border_box">black</a>
+                              <a class="option_item active letter_spacing_1 border_box">white</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap w_100 h_100 border_box flex bg_whitesmoke">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex align_center black">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex align_center black">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex align_center black">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex align_center black">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex align_center white">
+                                          Who
+                                          is Superman</div>
+                                    <div class="block_test bg_white black fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Position'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">relative</a>
+                              <a class="option_item active letter_spacing_1 border_box">absolute</a>
+                              <a class="option_item active letter_spacing_1 border_box">right_0</a>
+                              <a class="option_item active letter_spacing_1 border_box">bottom_0</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap border_box flex absolute right_0 bottom_0">
+                                    <div class="block_test bg_red white fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                                    <div class="block_test bg_green white fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                                    <div class="block_test bg_blue white fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                                    <div class="block_test bg_orange black fontsize_16 border_none flex align_center">
+                                          Who
+                                          is Superman</div>
+                                    <div class="block_test bg_black white fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                                    <div class="block_test bg_white black fontsize_16 border_none flex align_center">Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+                  <div
+                        class="demons_panel flex w_100"
+                        *ngIf="selected_option==='Display'"
+                  >
+                        <div class="options h_100 border_box flex flex_column color_888 fontsize_12">
+                              <a class="option_item active letter_spacing_1 border_box">radius_4</a>
+                        </div>
+                        <div class="panel h_100 border_box relative">
+                              <div class="block_wrap border_box w_100 h_100 flex">
+                                    <div
+                                          class="block_test bg_red white fontsize_16 border_none flex align_center radius_4 text_overflow_ellipsis">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_green white fontsize_16 border_none flex align_center radius_4">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_blue white fontsize_16 border_none flex align_center radius_4">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_orange black fontsize_16 border_none flex align_center radius_4">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_black white fontsize_16 border_none flex align_center radius_4">
+                                          Who
+                                          is Superman</div>
+                                    <div
+                                          class="block_test bg_white black fontsize_16 border_none flex align_center radius_4">
+                                          Who
+                                          is Superman</div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<div class="who_used w_100 flex justify_center">
+      <div class="who_used_content flex justify_center">
+            <div class="wrap flex flex_column align_center">
+                  <span class="title font_bold">Who used</span>
+                  <div class="description_items flex flex_column align_center w_100">
+                        <span class="describtion black text_center fontsize_16 letter_spacing_1">We believe the truth
+                              that there must have someone know atom.css and like it.</span>
+                        <span class="describtion black text_center fontsize_16 letter_spacing_1">Just let the skeptics
+                              to eat shit![emoji]</span>
+                  </div>
+                  <div class="used_items w_100 flex flex_wrap justify_center">
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/microsoft.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/apple.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/amazon.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/netflix.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/facebook.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/github.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                        <div class="used_item bg_white flex justify_center align_center">
+                              <img
+                                    src="./assets/images/google.png"
+                                    alt="iocn_used"
+                              >
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<div class="support_us w_100 flex justify_center">
+      <div class="support_us_content flex justify_center">
+            <div class="wrap flex flex_column align_center w_100">
+                  <span class="title font_bold">Support us</span>
+                  <div class="description_items flex flex_column align_center">
+                        <span class="description black text_center fontsize_16 letter_spacing_1">If you want support
+                              us, you
+                              can give us the order that design & frontend,you provide the Apis, we will design
+                        </span>
+                        <span class="description black text_center fontsize_16 letter_spacing_1">and build HTML
+                              templates by Fic Design and atom.css for you.</span>
+                        <span class="description black text_center fontsize_16 letter_spacing_1">Besides, we don`t
+                              accept any donation.</span>
+                  </div>
+
+                  <span class="sponsors black font_bold fontsize_18">Customer sponsors</span>
+                  <button
+                        class="btn btn_main"
+                        (click)="handleClickContact()"
+                  >Become a customer sponsor</button>
+            </div>
+      </div>
+</div>
+
+<section
+      *ngIf="is_modal_show"
+      class="contact_wrap w_100vw h_100vh fixed top_0 left_0 flex justify_center align_center"
+>
+      <div class="contact border_box flex flex_column justify_center align_center relative">
+            <div class="options absolute flex">
+                  <button
+                        class="bg_red btn"
+                        (click)="handleClickClose()"
+                  ></button>
+                  <button class="bg_orange btn"></button>
+                  <button class="bg_green btn"></button>
+            </div>
+            <span class="title">our email:</span>
+            <span class="email font_bold">xiewendao123@foxmail.com</span>
+      </div>
+</section>
